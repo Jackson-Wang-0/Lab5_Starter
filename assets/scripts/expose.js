@@ -1,4 +1,5 @@
 // expose.js
+import JSConfetti from 'js-confetti';
 
 window.addEventListener('DOMContentLoaded', init);
 
@@ -53,7 +54,7 @@ function init() {
 
   // Sound button and party effect
   const playButton = document.querySelector("section button");
-  const jsConfetti = new jsConfetti();
+  const jsConfetti = new JSConfetti();
   playButton.addEventListener("click", () => {
     audio.currentTime = 0;
     audio.play();
