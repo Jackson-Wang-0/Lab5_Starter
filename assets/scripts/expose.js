@@ -50,4 +50,22 @@ function init() {
       volumeIcon.alt = "Volume level 3";
     }
   });
+
+  // Sound button and party effect
+  const playButton = document.querySelector("section button");
+  playButton.addEventListener("click", () => {
+    audio.currentTime = 0;
+    audio.play();
+    if (hornSelect.value === "party-horn") {
+      confetti({
+        particleCount: 200,
+        spread: 200,
+        startVelocity: 50,
+        gravity: 1,
+        colors: ["#bb0000", "#ffffff", "#00bb00"],
+        shapes: ["circle", "square", "triangle"],
+        scalar: 2,
+      });
+    }
+  });
 }
