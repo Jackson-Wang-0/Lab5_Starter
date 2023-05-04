@@ -53,7 +53,7 @@ function init() {
 
   // Sound button and party effect
   const playButton = document.querySelector("section button");
-  const jsConfetti = new JSConfetti();
+  const jsConfetti = new jsConfetti();
   playButton.addEventListener("click", () => {
     audio.currentTime = 0;
     audio.play();
