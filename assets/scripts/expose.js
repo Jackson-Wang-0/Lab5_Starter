@@ -57,15 +57,8 @@ function init() {
     audio.currentTime = 0;
     audio.play();
     if (hornSelect.value === "party-horn") {
-      confetti({
-        particleCount: 200,
-        spread: 200,
-        startVelocity: 50,
-        gravity: 1,
-        colors: ["#bb0000", "#ffffff", "#00bb00"],
-        shapes: ["circle", "square", "triangle"],
-        scalar: 2,
-      });
+      const jsConfetti = new JSConfetti()
+      jsConfetti.addConfetti()
     }
   });
 }
