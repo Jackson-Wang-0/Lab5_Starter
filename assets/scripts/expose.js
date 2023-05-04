@@ -32,6 +32,7 @@ function init() {
   const volume = document.getElementById("volume");
   const volumeIcon = document.querySelector("section #volume-controls img");
   audio.volume = volume.value / 100; // set initial volume level
+  const jsConfetti = new JSConfetti();
   volume.addEventListener("input", () => {
     const volumeLevel = volume.value / 100;
     audio.volume = volumeLevel;
@@ -56,7 +57,7 @@ function init() {
     audio.currentTime = 0;
     audio.play();
     if (hornSelect.value === "party-horn") {
-      jsConfetti.addConfetti();
+      JSConfetti.addConfetti();
     }
   });
 }
