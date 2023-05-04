@@ -53,12 +53,12 @@ function init() {
 
   // Sound button and party effect
   const playButton = document.querySelector("section button");
+  const jsConfetti = new JSConfetti();
   playButton.addEventListener("click", () => {
     audio.currentTime = 0;
     audio.play();
     if (hornSelect.value === "party-horn") {
-      const jsConfetti = new JSConfetti()
-      jsConfetti.addConfetti()
+      jsConfetti.addConfetti();
     }
   });
 }
