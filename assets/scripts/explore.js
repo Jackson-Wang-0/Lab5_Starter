@@ -12,6 +12,13 @@ function init() {
     let voiceSelect = document.getElementById("voice-select");
     voiceSelect.innerHTML = "";
 
+    // Add the "Select Voice" option to the dropdown
+    let defaultOption = document.createElement('option');
+    defaultOption.textContent = 'Select Voice:';
+    defaultOption.disabled = true;
+    defaultOption.selected = true;
+    voiceSelect.appendChild(defaultOption);
+    
     // add options for each voice
     voices.forEach((voice, i) => {
       let option = document.createElement("option");
